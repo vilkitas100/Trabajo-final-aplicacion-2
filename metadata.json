@@ -1,0 +1,6 @@
+{
+  "name": "Trabajo final #2 . Profesora Liz Acuña . Auditoría de dinámica de procesos administrativos en la empresa",
+  "description": "Plataforma académica para estudiantes de administración: estudio teórico, auditoría de procesos administrativos y ética corporativa evaluada con agente de IA, informe final en Word y PDF con rúbrica de 40 puntos y certificado oficial.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
