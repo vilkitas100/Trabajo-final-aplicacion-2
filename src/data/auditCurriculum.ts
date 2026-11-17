@@ -1,4 +1,4 @@
-import { AuditTopic } from '../types/audit';
+import type { AuditTopic } from '../types/audit.ts';
 
 export const AUDIT_TOPICS: AuditTopic[] = [
   {

@@ -1,13 +1,13 @@
-import { AUDIT_TOPICS, TOTAL_AUDIT_QUESTIONS } from '../data/auditCurriculum';
-import { RUBRIC_CRITERIA } from '../data/rubricData';
-import {
+import { AUDIT_TOPICS, TOTAL_AUDIT_QUESTIONS } from '../data/auditCurriculum.ts';
+import { RUBRIC_CRITERIA } from '../data/rubricData.ts';
+import type {
   AuditSessionState,
   FinalRubricEvaluation,
   RubricCriterionId,
   RubricLevel,
   TopicEvaluation,
   TopicId,
-} from '../types/audit';
+} from '../types/audit.ts';
 
 export interface CompletionStats {
   answeredCount: number;

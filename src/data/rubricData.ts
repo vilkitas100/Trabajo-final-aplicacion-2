@@ -1,4 +1,4 @@
-import { RubricCriterion } from '../types/audit';
+import type { RubricCriterion } from '../types/audit.ts';
 
 export const SIG_RUBRIC_TITLE = 'Rúbrica de la propuesta de sistema de información gerencial';
 export const MAX_RUBRIC_SCORE = 40;

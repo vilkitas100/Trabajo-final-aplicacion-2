@@ -3,24 +3,23 @@ import express from 'express';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { GoogleGenAI, Type } from '@google/genai';
-import { createServer as createViteServer } from 'vite';
-import { AUDIT_TOPICS } from './src/data/auditCurriculum';
-import { RUBRIC_CRITERIA } from './src/data/rubricData';
+import { AUDIT_TOPICS } from './src/data/auditCurriculum.ts';
+import { RUBRIC_CRITERIA } from './src/data/rubricData.ts';
 import {
   buildHeuristicFinalEvaluation,
   buildHeuristicTopicEvaluation,
   clampScore,
   computeRubricTotal,
   toMaturityLevel,
-} from './src/utils/auditLogic';
-import {
+} from './src/utils/auditLogic.ts';
+import type {
   AuditSessionState,
   FinalRubricEvaluation,
   RubricCriterionId,
   RubricLevel,
   TopicEvaluation,
   TopicId,
-} from './src/types/audit';
+} from './src/types/audit.ts';
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
@@ -388,6 +387,7 @@ Devuelve un JSON con:
   });
 
   if (process.env.NODE_ENV !== 'production') {
+    const { createServer: createViteServer } = await import('vite');
     const vite = await createViteServer({
       server: { middlewareMode: true },
       appType: 'spa',
